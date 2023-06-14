@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Información Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="Registrarse()" >
+    <ul>
+      <li>
+        <div *ngIf="formulario.get('rut').errors && formulario.touched">
+          <div *ngIf="formulario.get('rut').hasError('required')" class="alert alert-danger" role="alert">
+            * RUT obligatorio
+          </div>
+          <div *ngIf="formulario.get('rut').hasError('pattern')" class="alert alert-danger" role="alert">
+            RUT Formato no es correcto
+          </div>
+        </div>
+        <input type="text" placeholder="RUT" formControlName="rut">
+      </li>
+      <li>
+        <input type="text" placeholder="Nombre Completo" formControlName="nombre">
+     </li>
+     <li>
+      <select type="text" placeholder="País" formControlName="pais">
+        <option>Seleccione País</option>
+        <option *ngFor="let item of pais" value="{{item.id}}">
+          {{item.nombre}}
+         </option>
+        </select>
+    </li>
+    <li>
+      <button type="submit" [disabled]="formulario.invalid">Registrarse</button>      
+    </li>
+   </ul>
+  </form>
+
+</ion-content>

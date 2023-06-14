@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>privado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <a [routerLink]="" routerLinkActive="router-link-active"  (click)="CerrarSession()">Cerrar Sesión</a>
+    <div style="display: block">
+      <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      [colors]="chartColors">
+      </canvas>
+    </div>
+
+    
+
+
+</ion-content>
