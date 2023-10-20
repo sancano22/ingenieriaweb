@@ -1,0 +1,47 @@
+[
+{
+  "id":1,
+  "nombre":"foto 1",
+  "src":"../../assets/carusel/1.png",
+  "descripcion":"descripción",
+  "autor": "@sancano",
+  "likes":10,
+  "comentarios":
+     [
+      {
+        "id":1,
+        "comentario": "genial foto!!",
+        "autor": "@pepito"
+      },
+      {
+        "id":1,
+        "comentario": "me encanto!!",
+        "autor": "@pepita"
+      }
+
+     ]
+  },{
+    "id":1,
+    "nombre":"foto 1",
+    "src":"../../assets/carusel/2.png",
+    "descripcion":"descripción",
+    "autor": "@sancano",
+    "likes":10,
+    "comentarios":
+       [
+        {
+          "id":2,
+          "comentario": "genial foto!!",
+          "autor": "@pepito"
+        },
+        {
+          "id":1,
+          "comentario": "me encanto!!",
+          "autor": "@pepita"
+        }
+  
+       ]
+    }
+
+
+]

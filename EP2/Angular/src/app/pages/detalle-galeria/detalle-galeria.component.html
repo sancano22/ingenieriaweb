@@ -1,0 +1,11 @@
+<div *ngIf="detalleGaleria!=null">
+    <h2>{{detalleGaleria.nombre}}</h2>
+    <img src="{{detalleGaleria.src}}">
+    <p>Comentarios</p>
+    <ul>
+        <li *ngFor="let item of detalleGaleria.comentarios">
+           <b>{{item["autor"]}}</b> {{item["comentario"]}}
+        </li>
+    </ul>
+
+</div>

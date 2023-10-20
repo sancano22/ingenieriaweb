@@ -1,0 +1,29 @@
+<form [formGroup]="formulario" (ngSubmit)="inicioSesion()" novalidate>
+    <div class="form-group">
+    <ul>
+      <li>
+     <div class="form-check">
+        <div *ngIf="email.errors && email.dirty">
+            <div *ngIf="email.hasError('required')" class="alert alert-danger">El correo electrónico es obligatorio</div>
+            <div *ngIf="email.hasError('email')" class="alert alert-danger">El correo electrónico no tiene el formato adecuado</div>
+    
+        </div>   
+        <input type="email" class="form-control" placeholder="correo electrónico" formControlName="email">
+    </div>  
+    </li>
+      <li>
+    <div class="form-check">
+        <div *ngIf="password.errors && password.dirty">
+            <div *ngIf="password.hasError('required')" class="alert alert-danger">La contraseñas es obligatoria</div>
+            <div *ngIf="password.hasError('maxlength')" class="alert alert-danger">La contraseña no tiene un máximo de</div>
+    
+        </div> 
+        <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+    </div> 
+    </li>
+    <li>
+      <button type="submit" [disabled]="formulario.invalid" class="btn btn-primary">Iniciar Sesión</button>      
+    </li>
+   </ul>
+   </div>
+  </form>

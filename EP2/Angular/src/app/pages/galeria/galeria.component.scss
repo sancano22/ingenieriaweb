@@ -1,0 +1,18 @@
+ul.datos{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+ul.datos li{
+    text-align: left;
+    margin:10px;
+}
+
+ul.general{
+    list-style-type: none;
+    display: flex;
+}
+
+ul.general li img{
+    width:220px;
+}

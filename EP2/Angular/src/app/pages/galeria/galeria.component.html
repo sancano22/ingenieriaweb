@@ -1,0 +1,9 @@
+<ul class="general">
+     <li *ngFor="let item of datos; let i=index;">
+          <a [routerLink]="['/','detalle',i]" routerLinkActive="router-link-active" ><img src="{{item.src}}" alt="{{item.nombre}}"></a>
+          <ul class="datos">
+            <li><b>Autor:</b>{{item.autor}}</li>
+            <li> <mat-icon svgIcon="thumbs-up"></mat-icon>({{item.likes}})</li>
+          </ul>
+     </li>
+</ul>
